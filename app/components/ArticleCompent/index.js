@@ -3,8 +3,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import Colors from "../../themes/colors";
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
 
+
 export default class ArticleCompent extends Component {
   render() {
+    const { article } = this.props;
+
     return (
       /*
       <View style={styles.container}>
@@ -21,18 +24,18 @@ export default class ArticleCompent extends Component {
       */
       <Card>
         <CardImage
-          source={{ uri: 'http://bit.ly/2GfzooV' }}
-          title="Top 10 South African beaches"
+          source={{ uri: article.imgUrl }}
+          title={article.title}
         />
         <CardTitle
-          subtitle="Number 6"
+          subtitle={article.subtitle}
         />
-        <CardContent text="Clifton, Western Cape" />
+        <CardContent text={article.body} />
         <CardAction
           separator={true}
           inColumn={false}>
           <CardButton
-            onPress={() => { }}
+            onPress={() => { console.log(this.props.key) }}
             title="Leia mais"
             color="#FEB557"
           />

@@ -27,7 +27,7 @@ export default (appRoutes) => createMaterialTopTabNavigator(
                     iconName = 'wechat';
 
                 else if (routeName === 'Messages')
-                    iconName = `message-text${outline}`;
+                    iconName = `newspaper`;
 
                 else if (routeName === 'Coracao')
                     iconName = `heart${outline}`;
